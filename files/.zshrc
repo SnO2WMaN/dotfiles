@@ -16,8 +16,8 @@ export IDE="code"
 export FILER="ranger"
 
 # scripts loading
-export SCRIPTS_DIR="~/.scripts.d"
-for file in `ls $SCRIPTS_DIR -1AF`; do
+export SCRIPTS_DIR="${HOME}/.scripts.d"
+for file in `ls ${SCRIPTS_DIR} -1`; do
   source "$SCRIPTS_DIR/${file}"
 done
 

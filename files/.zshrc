@@ -10,10 +10,13 @@ fi
 
 # default tool variables
 export TERMINAL="terminator"
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox-developer-edition"
 export EDITOR="vim"
 export IDE="code"
 export FILER="ranger"
+
+# aliases
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 # scripts loading
 export SCRIPTS_DIR="${HOME}/.scripts.d"
@@ -24,9 +27,6 @@ done
 # keybinding
 zle -N projects
 bindkey '^]' projects
-
-# aliases
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 autoload -Uz compinit && compinit -i
 

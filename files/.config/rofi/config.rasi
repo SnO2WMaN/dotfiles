@@ -1,0 +1,6 @@
+configuration {
+	theme: "~/.cache/wal/colors-rofi-dark";
+  font: "JetBrainsMono Nerd Font 10";
+	show-icons: false;
+	sidebar-mode: true;
+}

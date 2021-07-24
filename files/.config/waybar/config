@@ -1,0 +1,126 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": [
+      "sway/workspaces"
+    ],
+    "modules-center": [
+      "sway/window"
+    ],
+    "modules-right": [
+      "backlight",
+      "pulseaudio",
+      "battery",
+      "clock"
+    ],
+    "sway/window": {
+      "tooltip": false
+    },
+    "clock": {
+      "interval": 1,
+      "format": "{:%Y.%m.%d %H:%M:%S}"
+    },
+    "backlight": {
+      "format": "{icon} {percent}%",
+      "states": [
+        0,
+        50
+      ],
+      "format-icons": [
+        "",
+        ""
+      ]
+    },
+    "battery": {
+      "interval": 7,
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-discharging": " {capacity}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "network": {
+      "interval": 7,
+      "format": "{ifname}",
+      "format-wifi": "  {essid}",
+      "format-ethernet": "  {ifname}",
+      "format-disconnected": "⚠ Disconnected",
+      "tooltip-format-wifi": "{signalStrength}%"
+    },
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} {volume}%",
+      "format-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+          "",
+          ""
+        ]
+      },
+      "scroll-step": 1,
+      "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+      "exec": "curl 'https://wttr.in/?format=1'",
+      "interval": 3600
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "height": 24,
+    "modules-left": [
+      "custom/media"
+    ],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "temperature"
+    ],
+    "cpu": {
+      "format": " {usage}%"
+    },
+    "memory": {
+      "format": " {}%"
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": " {temperatureC}°C",
+      "format-critical": " {temperatureC}°C"
+    },
+    "disk": {
+      "interval": 30,
+      "format": "{percentage_free}% ({free})",
+      "path": "/"
+    },
+    "custom/media": {
+      "format-icons": {
+        "Playing": " ",
+        "Paused": " "
+      },
+      "format": "{icon} {}",
+      "return-type": "json",
+      "exec": "playerctl metadata --format '{\"text\": \"{{playerName}} : {{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "on-click": "playerctl play-pause"
+    }
+  }
+]

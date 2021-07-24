@@ -1,0 +1,73 @@
+* {
+  font-size: 12px;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+window#waybar {
+  background: rgba(66, 66, 66, 0.8);
+}
+
+#workspaces button {
+  border-radius: 0;
+  border: 0;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#workspaces button.visible {
+  background-color: rgba(64, 141, 204, 0.8);
+}
+
+#battery {
+  margin: 0 12px;
+  color: #fff;
+}
+
+#clock {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#pulseaudio {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#network {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#cpu {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#memory {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#temperature {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#disk {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#custom-weather {
+  padding: 0 12px;
+  color: #fff;
+}
+
+#custom-media {
+  padding: 0 12px;
+  color: #fff;
+  font-family: "JetBrainsMono Nerd Font", "IPAexGothic";
+}

@@ -14,5 +14,5 @@ indent_style = space
 [.*-version]
 insert_final_newline = false
 
-[.yaylist.txt]
+[.*-versions]
 insert_final_newline = false

@@ -20,7 +20,7 @@ export FILER="ranger"
 
 # scripts loading
 export SCRIPTS_DIR="${HOME}/.scripts.d"
-for file in `ls ${SCRIPTS_DIR} -1`; do
+for file in `/bin/ls -1 ${SCRIPTS_DIR}`; do
   source "$SCRIPTS_DIR/${file}"
 done
 

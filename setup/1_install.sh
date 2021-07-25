@@ -14,7 +14,7 @@ yay -S \
   ranger \
   ghq \
   fzf \
-  code \
+  visual-studio-code-bin \
   firefox-developer-edition \
   spotify \
   discord

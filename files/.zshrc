@@ -8,13 +8,6 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-# default tool variables
-export TERMINAL="terminator"
-export BROWSER="firefox-developer-edition"
-export EDITOR="vim"
-export IDE="code"
-export FILER="ranger"
-
 # aliases
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 

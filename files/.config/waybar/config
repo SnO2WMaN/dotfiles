@@ -10,6 +10,7 @@
       "sway/window"
     ],
     "modules-right": [
+      "network",
       "backlight",
       "pulseaudio",
       "battery",

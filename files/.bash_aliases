@@ -2,6 +2,7 @@
 alias d="docker"
 alias g="git"
 alias v="vim"
+alias z="zellij"
 
 # 2 character
 alias dc="docker-compose"
@@ -21,6 +22,7 @@ alias rm="rm -i"
 alias vm="vim"
 
 # replacement
+alias yay="paru"
 alias ls="exa"
 alias cat="bat"
 alias less="bat"

@@ -1,20 +1,37 @@
-yay -S \
-  yay \
+paru -S --skipreview --noupgrademenu \
+  paru-bin \
   sway \
   swaylock-effects \
   waybar \
   wofi \
-  slurp grim \
+  slurp \
+  grim \
   pulseaudio \
   playerctl \
   brightnessctl \
   asdf-vm \
   alacritty \
+  curl \
+  wget \
   vim \
   ranger \
-  ghq \
+  ghq-bin \
   fzf \
+  direnv-bin \
+  zellij \
+  bat \
+  exa \
+  dust \
+  procs \
+  hyperfine \
+  ytop-bin \
+  dog \
+  bottom \
+  delta \
+  rm-improved \
   visual-studio-code-bin \
   firefox-developer-edition \
   spotify \
-  discord
+  discord \
+  docker \
+  docker-compose \

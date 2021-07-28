@@ -17,6 +17,7 @@ fzf                               # fuzy finder
 ghq-bin                           # git projects manager
 grim                              # screenshot for wayland
 hyperfine                         # rust implemented time
+nerd-fonts-jetbrains-mono         # JetBrains Mono Nerd Font
 paru-bin                          # aur helper
 playerctl                         # media controller
 procs                             # rust implemented ps
@@ -36,3 +37,4 @@ wget                              # file downloader
 wofi                              # dmenu for sway
 ytop-bin                          # task manager
 zellij                            # multiplexier
+zsh                               # z shell

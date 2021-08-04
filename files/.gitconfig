@@ -2,6 +2,9 @@
 	email = me@sno2wman.net
     name = SnO2WMaN
 
+[init]
+	defaultBranch = main
+
 [credential "https://github.com"]
     helper = !gh auth git-credential
 

@@ -11,8 +11,11 @@ set $code code
 set $browser firefox-developer-edition
 
 set $menu "wofi --show drun"
-set $screenshot 'slurp | grim -g - ~/Screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
+set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
 set $screenlock 'swaylock'
+
+# init
+exec fcitx
 
 # background
 output * bg $(find ~/.config/wallpapers -type f,l -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' | shuf -n 1) fill

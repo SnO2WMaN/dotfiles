@@ -22,7 +22,6 @@ alias rm="rm -i"
 alias vm="vim"
 
 # replacement
-alias yay="paru"
 alias ls="exa"
 alias cat="bat"
 alias less="bat"

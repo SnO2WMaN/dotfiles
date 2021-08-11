@@ -1,0 +1,17 @@
+brightnessctl
+brightnessctl
+fcitx
+fcitx-configtool
+grim
+gvfs
+mako
+network-manager-applet
+pavucontrol
+pcmanfm-gtk3
+playerctl
+pulseaudio
+slurp
+sway
+swaylock-effects
+waybar
+wofi

@@ -15,7 +15,9 @@ set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%
 set $screenlock 'swaylock'
 
 # init
-exec fcitx
+exec --no-startup-id "mako"
+exec --no-startup-id "fcitx"
+exec --no-startup-id "gammastep"
 
 # background
 output * bg $(find ~/.config/wallpapers -type f,l -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' | shuf -n 1) fill
@@ -145,6 +147,15 @@ for_window [instance="1password"] floating enable
 for_window [instance="qpaeq"] floating enable
 
 # assign
-assign [window_role="browser"] 1
+# assign [window_role="browser"] 1
 
+# timeout
+exec swayidle -w \
+    timeout 900 'swaymsg "output * dpms off"' \
+    resume      'swaymsg "output * dpms on"'
+
+exec swayidle \
+	before-sleep 'swaylock; swaymsg "output * dpms off"' \
+	after-resume 'swaymsg "output * dpms on"'
+	
 include /etc/sway/config.d/*

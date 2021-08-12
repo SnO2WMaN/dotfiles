@@ -28,3 +28,4 @@ vim
 wget
 zellij
 zsh
+paru

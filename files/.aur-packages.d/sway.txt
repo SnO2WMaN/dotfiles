@@ -15,3 +15,9 @@ sway
 swaylock-effects
 waybar
 wofi
+tlp
+tlp-rdw
+swayidle
+keychain
+gnome-ssh-askpass3
+gammastep

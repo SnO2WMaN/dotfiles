@@ -1,4 +1,3 @@
-asdf
 asdf-vm
 bat
 bottom
@@ -11,7 +10,7 @@ exa
 fzf
 ghq
 git
-github-acli
+github-cli
 hyperfine
 jq
 jq
@@ -29,3 +28,6 @@ wget
 zellij
 zsh
 paru
+hadolint
+stack
+rustup

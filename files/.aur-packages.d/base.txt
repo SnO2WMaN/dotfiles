@@ -31,3 +31,4 @@ paru
 hadolint
 stack
 rustup
+dive

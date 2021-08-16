@@ -15,12 +15,11 @@ set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%
 set $screenlock 'swaylock'
 
 # init
-exec --no-startup-id "mako"
-exec --no-startup-id "fcitx"
-exec --no-startup-id "gammastep"
+exec mako
+exec fcitx
+exec gammastep
+exec swaybg -i "$(find ~/Pictures/wallpapers/* -type f,l -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' | shuf -n 1)"
 
-# background
-output * bg $(find ~/.config/wallpapers -type f,l -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' | shuf -n 1) fill
 
 # input
 input * {

@@ -73,6 +73,9 @@ bindkey '^[[B' history-substring-search-down # Down
 bindkey '^[[D' backward-char # Left
 bindkey '^[[C' forward-char # Right
 
+bindkey '^[[1;2D' backward-word
+bindkey '^[[1;2C' forward-word
+
 bindkey '^[Od' backward-word # Ctrl+Left
 bindkey '^[Oc' forward-word # Ctrl+Right
 bindkey '^H' backward-kill-word # Ctrl+Backspace

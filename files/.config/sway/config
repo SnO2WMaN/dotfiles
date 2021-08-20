@@ -150,11 +150,15 @@ for_window [instance="qpaeq"] floating enable
 
 # timeout
 exec swayidle -w \
+    timeout 600 'swaylock' \
+    resume      'swaymsg "output * dpms on"'
+
+exec swayidle -w \
     timeout 900 'swaymsg "output * dpms off"' \
     resume      'swaymsg "output * dpms on"'
 
 exec swayidle \
-	before-sleep 'swaylock; swaymsg "output * dpms off"' \
+	before-sleep 'swaymsg "output * dpms off"' \
 	after-resume 'swaymsg "output * dpms on"'
-	
+
 include /etc/sway/config.d/*

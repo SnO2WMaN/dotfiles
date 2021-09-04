@@ -11,3 +11,4 @@
 [alias]
     c = commit --verbose
     initc = commit --allow-empty -m 'Initial Commit'
+	root = rev-parse --show-toplevel

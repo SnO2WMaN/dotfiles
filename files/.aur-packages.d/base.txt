@@ -32,3 +32,9 @@ hadolint
 stack
 rustup
 dive
+grpcurl
+protobuf
+unzip
+brotli
+plantuml
+libwebp

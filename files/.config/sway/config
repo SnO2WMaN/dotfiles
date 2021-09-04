@@ -6,21 +6,20 @@ set $down Down
 set $up Up
 set $right Right
 
-set $term alacritty
+set $term "exec ~/.bin.d/alacritty.sh"
 set $code code
-set $browser firefox-developer-edition
+set $browser "exec ~/.bin.d/firefox-developer-edition.sh"
+set $filer pcmanfm
 
-set $menu "wofi --show drun"
+set $menu "killall -q wofi || wofi --show drun"
 set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
 set $screenlock 'swaylock'
 
 # init
-exec --no-startup-id "mako"
-exec --no-startup-id "fcitx"
-exec --no-startup-id "gammastep"
-
-# background
-output * bg $(find ~/.config/wallpapers -type f,l -name '*.png' -or -name '*.jpg' -or -name '*.jpeg' | shuf -n 1) fill
+exec mako
+exec fcitx -d
+exec gammastep
+exec swaybg -i ~/Pictures/wallpapers/surfing-internet.png -m fill
 
 # input
 input * {
@@ -33,6 +32,7 @@ font xft:JetBrainsMono Nerd Font 11
 # launch app
 bindsym $mod+Return exec $term
 bindsym $mod+d exec --no-startup-id $menu
+bindsym $mod+p exec --no-startup-id $filer
 bindsym $mod+F1 exec $code
 bindsym $mod+F2 exec $browser
 bindsym $mod+Print exec $screenshot
@@ -45,7 +45,7 @@ bindsym $mod+Shift+Delete kill
 bindsym $mod+Shift+c reload
 
 # exit
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+# bindsym $mod+shift+e exec ~/.bin.d/wofi-powermenu.sh
 
 # fullscreen
 bindsym $mod+f fullscreen
@@ -122,12 +122,20 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 floating_modifier $mod normal
 
+# gaps
+gaps inner 4
+gaps outer 2
+smart_gaps on
+focus_follows_mouse no
+default_border pixel 2
+for_window [app_id="^.*"] border pixel 2
+
 # resize
 mode "resize" {
-    bindsym $left resize shrink width 5 px or 5 ppt
-    bindsym $down resize grow height 5 px or 5 ppt
-    bindsym $up resize shrink height 5 px or 5 ppt
-    bindsym $right resize grow width 5 px or 5 ppt
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -143,6 +151,8 @@ for_window [app_id="Alacritty"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="pcmanfm"] floating enable
+for_window [app_id="ristretto"] floating enable
+for_window [instance="1password"] floating enable
 for_window [instance="1password"] floating enable
 for_window [instance="qpaeq"] floating enable
 
@@ -151,11 +161,15 @@ for_window [instance="qpaeq"] floating enable
 
 # timeout
 exec swayidle -w \
+    timeout 600 'swaylock' \
+    resume      'swaymsg "output * dpms on"'
+
+exec swayidle -w \
     timeout 900 'swaymsg "output * dpms off"' \
     resume      'swaymsg "output * dpms on"'
 
 exec swayidle \
-	before-sleep 'swaylock; swaymsg "output * dpms off"' \
+	before-sleep 'swaymsg "output * dpms off"' \
 	after-resume 'swaymsg "output * dpms on"'
-	
+
 include /etc/sway/config.d/*

@@ -6,6 +6,7 @@ alias z="zellij"
 
 # 2 character
 alias dc="docker-compose"
+alias wq="wg-quick"
 
 # default
 alias terminal="$TERMINAL"
@@ -42,6 +43,9 @@ alias la="ls -a"
 alias lt="ls -T"
 alias l1="ls -1"
 alias l="clear && ll"
+
+# git
+alias gcd="cd $(git root)"
 
 # xclip
 alias clip="xclip -selection c"

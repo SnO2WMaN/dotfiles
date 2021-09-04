@@ -65,6 +65,10 @@ source <(starship init zsh --print-full-init)
 [[ -f "~/.cargo/env" ]] && source ~/.cargo/env
 [[ -f "~/.ghcup/env" ]] && source ~/.ghcup/env
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # keybinding
 bindkey -e
 

@@ -20,3 +20,9 @@ swayidle
 keychain
 gnome-ssh-askpass3
 gammastep
+gvfs-smb
+ristretto
+tumbler
+wireguard-tools
+openresolv
+swaybg

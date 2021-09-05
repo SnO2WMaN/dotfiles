@@ -9,21 +9,21 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/colors/nord.yaml
+  - ~/.config/alacritty/colors/nord.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: alacritty
+  TERM: xterm-256color
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -45,9 +45,9 @@ import:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 8
+    y: 16
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -105,22 +105,75 @@ import:
 font:
   # Normal (roman) font face
   normal:
-    family: JetBrainsMono Nerd Font
-    style: Regular
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    #family: monospace
+    family: Iosevka Nerd Font
 
+    # The `style` can be specified to pick a specific face.
+    #style: Regular
+
+  # Bold font face
   bold:
-    family: JetBrainsMono Nerd Font
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+    family: Iosevka Nerd Font
+    # The `style` can be specified to pick a specific face.
     style: Bold
 
+  # Italic font face
   italic:
-    family: JetBrainsMono Nerd Font
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+    family: Iosevka Nerd Font
+
+    # The `style` can be specified to pick a specific face.
     style: Italic
 
+  # Bold italic font face
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+    family: Iosevka Nerd Font
+
+    # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
-  size: 6
+  # Point size
+  size: 12
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+
+  # Thin stroke font rendering (macOS only)
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  #use_thin_strokes: true
+
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 

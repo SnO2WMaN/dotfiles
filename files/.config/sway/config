@@ -12,6 +12,7 @@ set $browser "exec ~/.bin.d/firefox-developer-edition.sh"
 set $filer pcmanfm
 
 set $menu "killall -q wofi || wofi --show drun"
+set $powermenu "exec ~/.bin.d/wofi-powermenu.sh"
 set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
 set $screenlock 'swaylock'
 
@@ -19,20 +20,24 @@ set $screenlock 'swaylock'
 exec mako
 exec fcitx -d
 exec gammastep
-exec swaybg -i ~/Pictures/wallpapers/surfing-internet.png -m fill
+exec swaybg -i ~/Pictures/wallpapers/nordic-mountain.jpg -m fill
+exec wl-paste -t text --watch clipman store
 
 # input
 input * {
     xkb_layout "jp"
 }
 
+input * xkb_numlock enable
+
 # font
-font xft:JetBrainsMono Nerd Font 11
+font xft:Iosevka Nerd Font 11
 
 # launch app
 bindsym $mod+Return exec $term
 bindsym $mod+d exec --no-startup-id $menu
 bindsym $mod+p exec --no-startup-id $filer
+bindsym $mod+c exec clipman pick -t wofi
 bindsym $mod+F1 exec $code
 bindsym $mod+F2 exec $browser
 bindsym $mod+Print exec $screenshot
@@ -45,7 +50,7 @@ bindsym $mod+Shift+Delete kill
 bindsym $mod+Shift+c reload
 
 # exit
-# bindsym $mod+shift+e exec ~/.bin.d/wofi-powermenu.sh
+bindsym $mod+Shift+e exec $powermenu
 
 # fullscreen
 bindsym $mod+f fullscreen

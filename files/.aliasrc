@@ -1,6 +1,7 @@
 # 1 character
 alias d="docker"
 alias g="git"
+alias l="clear && ll"
 alias v="vim"
 alias z="zellij"
 
@@ -42,7 +43,7 @@ alias ll="ls -alF"
 alias la="ls -a"
 alias lt="ls -T"
 alias l1="ls -1"
-alias l="clear && ll"
 
-# xclip
-alias clip="xclip -selection c"
+# clipboard
+alias copy="wl-copy"
+alias clip="copy"

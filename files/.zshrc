@@ -31,7 +31,7 @@ export EDITOR="vim"
 export FILER="ranger"
 
 # aliases
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.aliasrc ]] && exec ~/.aliasrc
 
 # scripts loading
 export SCRIPTS_DIR="${HOME}/.scripts.d"

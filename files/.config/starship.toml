@@ -1,3 +1,22 @@
 add_newline = true
 
 scan_timeout = 10
+
+format = """
+[┌─](white)$username@$hostname:$directory$git_branch$git_status
+[└─](white)$character
+"""
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style)"
+show_always = true
+
+[directory]
+truncation_length = 5
+format = "[$read_only]($read_only_style)[$path](bold underline #f1fa8c) "
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold #8be9fd)"

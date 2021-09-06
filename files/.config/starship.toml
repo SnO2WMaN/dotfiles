@@ -3,20 +3,33 @@ add_newline = true
 scan_timeout = 10
 
 format = """
-[┌─](white)$username@$hostname:$directory$git_branch$git_status
-[└─](white)$character
+[┌─ ](#4c566a)$username$hostname$directory$git_branch$git_status
+[└─ ](#4c566a)$character
 """
 
 [username]
-style_user = "white bold"
-style_root = "black bold"
+style_user = "#eceff4 bold italic"
+style_root = "#ebcb8b bold italic"
 format = "[$user]($style)"
 show_always = true
 
-[directory]
-truncation_length = 5
-format = "[$read_only]($read_only_style)[$path](bold underline #f1fa8c) "
-
 [hostname]
 ssh_only = false
-format = "[$hostname](bold #8be9fd)"
+format = "[@](#88c0d0 italic)[$hostname](bold italic #88c0d0)"
+
+[directory]
+truncation_length = 5
+format = "[:](#8fbcbb)[$read_only]($read_only_style)[$path](bold underline italic #8fbcbb) "
+
+[character]
+success_symbol = "[❯](bold #88c0d0)"
+error_symbol = "[❯](bold #bf616a)"
+vicmd_symbol = "[❮](bold #88c0d0)"
+
+[git_branch]
+format = "[on](#d8dee9) [$symbol]($style) [$branch]($style italic) "
+symbol = ""
+style = "bold #b48ead"
+
+[git_status]
+style = "bold #bf616a"

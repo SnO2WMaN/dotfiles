@@ -1,4 +1,5 @@
 1password
+altair
 asdf-vm
 binance
 cava

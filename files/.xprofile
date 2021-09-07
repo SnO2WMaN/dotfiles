@@ -1,9 +1,0 @@
-keychain ~/.ssh/id_ed25519
-[ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
-[ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
-
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
-[[ -f ~/.screenlayout/index.sh ]] && source ~/.screenlayout/index.sh

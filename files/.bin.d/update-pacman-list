@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-cat /etc/packages-list-foreign.txt ~/.pacman.d/packages-list-foreign.txt | sort | uniq > ./files/.pacman.d/packages-list-foreign.txt
-cat /etc/packages-list-native.txt ~/.pacman.d/packages-list-native.txt | sort | uniq > ./files/.pacman.d/packages-list-native.txt
+cat /etc/packages-list-foreign.txt ~/.pacman.d/packages-list-foreign.txt | sort | uniq > /tmp/foreign.txt
+cat /etc/packages-list-native.txt ~/.pacman.d/packages-list-native.txt | sort | uniq > /tmp/native.txt
+
+cat /tmp/foreign.txt > ./files/.pacman.d/packages-list-foreign.txt
+cat /tmp/native.txt > ./files/.pacman.d/packages-list-native.txt

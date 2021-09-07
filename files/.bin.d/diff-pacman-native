@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+diff -u <(pacman -Qqe --native) <(cat ~/.pacman.d/packages-list-native.txt)

@@ -1,7 +1,9 @@
 1password
+act
 altair
 asdf-vm
 binance
+buf
 cava
 cbonsai
 clipman
@@ -13,9 +15,10 @@ gnome-ssh-askpass3
 grpcurl
 hadolint
 nerd-fonts-iosevka
+noisetorch
 nordic-theme-git
 pacman-hook-list-installed-packages
-paru
+paru-bin
 pipes.sh
 rm-improved
 slack-desktop
@@ -27,5 +30,6 @@ tty-clock
 vim-plug
 visual-studio-code-bin
 wev
+wlr-randr
 wob
 zellij

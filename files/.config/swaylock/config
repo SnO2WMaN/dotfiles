@@ -4,7 +4,7 @@ clock
 timestr=%H:%M:%S
 datestr=%Y.%m.%d
 
-font=JetBrainsMono Nerd Font
+font=Iosevka Nerd Font
 font-size=16
 
 fade-in=0.1

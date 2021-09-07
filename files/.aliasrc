@@ -34,7 +34,7 @@ alias time='hyperfine'
 alias top='ytop'
 alias ytop="btm"
 alias rm="rip"
-alias diff="delta"
+# alias diff="delta"
 alias dig="drill"
 alias drill="dog"
 

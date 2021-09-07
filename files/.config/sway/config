@@ -6,19 +6,20 @@ set $down Down
 set $up Up
 set $right Right
 
-set $term "exec ~/.bin.d/alacritty.sh"
+set $term alacritty
 set $code code
-set $browser "exec ~/.bin.d/firefox-developer-edition.sh"
+set $browser firefox
 set $filer pcmanfm
 
-set $menu "killall -q wofi || wofi --show drun"
-set $powermenu "exec ~/.bin.d/wofi-powermenu.sh"
+set $menu "~/.bin.d/dmenu"
+set $clipmenu "~/bin.d/clipmenu"
+set $powermenu "~/.bin.d/powermenu"
 set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
 set $screenlock 'swaylock'
 
 # init
 exec mako
-exec fcitx -d
+exec fcitx5
 exec gammastep
 exec swaybg -i ~/Pictures/wallpapers/nordic-mountain.jpg -m fill
 exec wl-paste -t text --watch clipman store
@@ -37,9 +38,10 @@ font xft:Iosevka Nerd Font 11
 bindsym $mod+Return exec $term
 bindsym $mod+d exec --no-startup-id $menu
 bindsym $mod+p exec --no-startup-id $filer
-bindsym $mod+c exec clipman pick -t wofi
+bindsym $mod+c exec --no-startup-id $clipmenu
 bindsym $mod+F1 exec $code
 bindsym $mod+F2 exec $browser
+
 bindsym $mod+Print exec $screenshot
 bindsym $mod+F12 exec $screenlock
 
@@ -50,7 +52,7 @@ bindsym $mod+Shift+Delete kill
 bindsym $mod+Shift+c reload
 
 # exit
-bindsym $mod+Shift+e exec $powermenu
+bindsym $mod+Shift+BackSpace exec --no-startup-id $powermenu
 
 # fullscreen
 bindsym $mod+f fullscreen

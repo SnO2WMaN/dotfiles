@@ -8,7 +8,7 @@ set $right Right
 
 set $term alacritty
 set $code code
-set $browser firefox
+set $browser firefox-developer-edition
 set $filer pcmanfm
 
 set $menu "~/.bin.d/dmenu"

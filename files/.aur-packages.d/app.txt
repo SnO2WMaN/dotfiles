@@ -1,9 +1,0 @@
-1password
-alacritty
-discord
-firefox-developer-edition
-gitkraken
-slack-desktop
-spotify
-steam
-visual-studio-code-bin

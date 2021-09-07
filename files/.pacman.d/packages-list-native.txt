@@ -19,14 +19,16 @@ dust
 efibootmgr
 exa
 fakeroot
-fcitx-configtool
-fcitx-mozc
+fcitx5-configtool
+fcitx5-mozc
+firefox
 firefox-developer-edition
 flameshot
 flex
 fzf
 gammastep
 gcc
+geoip
 git
 github-cli
 grim
@@ -49,6 +51,7 @@ make
 mako
 man-db
 neofetch
+neovim
 network-manager-applet
 networkmanager
 noto-fonts-cjk
@@ -63,6 +66,7 @@ playerctl
 procs
 protobuf
 pulseaudio
+qt5-wayland
 ranger
 reflector
 ristretto
@@ -88,5 +92,6 @@ wl-clipboard
 wofi
 xorg-server
 xorg-server-xephyr
+xorg-xeyes
 xorg-xwayland
 zsh

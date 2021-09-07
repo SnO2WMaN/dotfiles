@@ -1,4 +1,0 @@
-kde-gtk-config
-powerdevil
-rofi
-kdenetwork-filesharing

@@ -1,18 +1,23 @@
 #!/bin/sh
 
-export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_TYPE=wayland;
 
-export XDG_CURRENT_DESKTOP=sway
-export XDG_CURRENT_SESSION=sway
+export XDG_CURRENT_DESKTOP=sway;
+export XDG_CURRENT_SESSION=sway;
 
-export LIBSEAT_BACKEND=logind
+# export LIBSEAT_BACKEND=logind;
 
-export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORM=wayland;
 
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_DBUS_REMOTE=1
+# export MOZ_ENABLE_WAYLAND=1;
+# export MOZ_DBUS_REMOTE=1;
 
-export WINIT_UNIX_BACKEND=x11
+export WINIT_UNIX_BACKEND=x11;
+
+export GTK_IM_MODULE=DEFAULT=fcitx
+export QT_IM_MODULE=DEFAULT=fcitx
+export SDL_IM_MODULE=DEFAULT=fcitx
+export XMODIFIERS=DEFAULT=\@im=fcitx
 
 sleep 1;
 exec sway

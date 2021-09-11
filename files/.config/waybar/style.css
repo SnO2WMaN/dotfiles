@@ -65,6 +65,11 @@
 	color: @nord4;
 }
 
+#workspaces button.visible{
+	background-color: @nord9;
+	color: @nord5;
+}
+
 #workspaces button.focused {
 	background-color: @nord7;
 	color: @nord6;

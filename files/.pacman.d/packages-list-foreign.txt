@@ -1,8 +1,11 @@
 1password
 act
+act-bin
 altair
 asdf-vm
+aseprite-skia-bin
 binance
+breeze-snow-cursor-theme
 buf
 cava
 cbonsai
@@ -25,6 +28,7 @@ slack-desktop
 spotify
 spotify-tui-bin
 swaylock-effects
+ttf-ancient-fonts
 ttf-hackgen-nerd
 tty-clock
 vim-plug

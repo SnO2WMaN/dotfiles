@@ -10,6 +10,7 @@ bison
 bottom
 brightnessctl
 btrfs-progs
+cadence
 dhcpcd
 discord
 docker
@@ -20,8 +21,11 @@ dust
 efibootmgr
 exa
 fakeroot
+fcitx5
 fcitx5-configtool
+fcitx5-gtk
 fcitx5-mozc
+fcitx5-qt
 firefox
 firefox-developer-edition
 flameshot
@@ -39,6 +43,7 @@ groff
 grub
 gvfs
 gvfs-smb
+haskell-tidal
 hyperfine
 imwheel
 jq
@@ -72,17 +77,20 @@ procs
 protobuf
 pulseaudio
 pulseaudio-equalizer
+pulseaudio-jack
 qt5-wayland
 ranger
 reflector
 ristretto
 rustup
+sc3-plugins
 slurp
 speedtest-cli
 stack
 starship
 steam
 sudo
+supercollider
 sway
 swayidle
 texinfo
@@ -94,6 +102,7 @@ vim
 waybar
 wget
 which
+wine
 wireguard-tools
 wl-clipboard
 wofi

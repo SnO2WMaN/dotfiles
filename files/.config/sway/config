@@ -15,7 +15,8 @@ set $menu "~/.bin.d/dmenu"
 set $clipmenu "~/bin.d/clipmenu"
 set $powermenu "~/.bin.d/powermenu"
 set $ghqmenu "~/.bin.d/ghqmenu"
-set $screenshot 'slurp | grim -g - ~/Pictures/screenshots/$(date +"%Y.%m.%d_%H.%M.%S.png")'
+set $screenshot '~/.bin.d/screenshot'
+set $screenrecord '~/.bin.d/screenrecord'
 set $screenlock 'swaylock'
 
 # init
@@ -45,6 +46,8 @@ bindsym $mod+F1 exec $code
 bindsym $mod+F2 exec $browser
 
 bindsym $mod+Print exec $screenshot
+bindsym $mod+Shift+S exec $screenshot
+bindsym $mod+Shift+G exec $screenrecord
 bindsym $mod+F12 exec $screenlock
 
 # kill

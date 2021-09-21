@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-choice=$(ghq list | wofi -i -b --dmenu -p ghq)
+choice=$(killall -q wofi || ghq list | wofi -i -b --dmenu -p ghq)
 
 [[ -n "$choice" ]] && code $(ghq root)/$choice

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+grimshot --notify save area $(~/.bin.d/ssdate png)

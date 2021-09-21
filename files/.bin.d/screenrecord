@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# if this script is not active, ask which region (fullscreen or area) to record, and start recording.
+# else, send termination to the process, meaning stopping recording.
+
+
+PIDS=$(ps -ef | grep ~/.bin.d/screenrecord | grep bash | grep -v grep | awk '{ print $2 }')
+THIS=$(echo ${PIDS} | awk '{print $1}')
+
+if [ $(echo ${PIDS} | wc -w) != 2 ]; then
+#  kill -INT ${PID} &&
+    ~/.bin/killtree "${THIS}" INT
+    TITLE="screenrecord stopped"
+    MESSAGE="Successfully stopped screenrecord"
+    notify-send -t 3000 "${TITLE}" "${MESSAGE}"
+
+else
+  pref=$(echo -e " full\n area" | wofi -i -b -p capture --dmenu --width 300 --lines=2 | awk '{print tolower($2)}')&&
+    case $pref in
+      full)
+        TITLE="screenrecord started"
+        MESSAGE="started screenrecord: full mode"
+        notify-send -t 3000 "${TITLE}" "${MESSAGE}"
+        wf-recorder --codec=gif -f $(ssdate gif) || {
+            TITLE="exit"
+            MESSAGE="canceled by <Esc>"
+            notify-send -t 3000 "${TITLE}" "${MESSAGE}"
+          }
+        ;;
+      area)
+        TITLE="screenrecord started"
+        MESSAGE="started screenrecord: area mode"
+        notify-send -t 3000 "${TITLE}" "${MESSAGE}"
+        AREA=$(slurp)&&
+          wf-recorder -g "${AREA}" --codec=gif -f $(ssdate gif) || {
+            TITLE="exit"
+            MESSAGE="canceled by <Esc>"
+            notify-send -t 3000 "${TITLE}" "${MESSAGE}"
+          }
+        ;;
+    esac
+
+fi

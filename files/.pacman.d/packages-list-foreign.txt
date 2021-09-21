@@ -1,4 +1,5 @@
 1password
+7-zip
 act
 act-bin
 altair
@@ -15,6 +16,8 @@ dive
 ghq
 gitkraken
 gnome-ssh-askpass3
+google-chrome
+grimshot
 grpcurl
 hadolint
 nerd-fonts-iosevka

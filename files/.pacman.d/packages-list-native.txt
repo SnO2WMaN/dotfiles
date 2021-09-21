@@ -100,6 +100,7 @@ tumbler
 unzip
 vim
 waybar
+wf-recorder
 wget
 which
 wine

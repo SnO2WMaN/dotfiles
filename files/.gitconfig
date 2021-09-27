@@ -10,5 +10,9 @@
 
 [alias]
     c = commit --verbose
+    b = branch
+	sw = switch
+    pl = pull
+    ps = push
     initc = commit --allow-empty -m 'Initial Commit'
-	root = rev-parse --show-toplevel
+    root = rev-parse --show-toplevel

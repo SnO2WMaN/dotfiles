@@ -34,7 +34,7 @@ input * {
 input * xkb_numlock enable
 
 # font
-font xft:Iosevka Nerd Font 11
+font "Noto Sans Japanese" 8
 
 # launch app
 bindsym $mod+Return exec $term

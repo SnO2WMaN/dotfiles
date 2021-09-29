@@ -168,6 +168,7 @@ for_window [app_id="zoom"] floating enable
 for_window [instance="1password"] floating enable
 for_window [instance="1password"] floating enable
 for_window [instance="qpaeq"] floating enable
+for_window [instance="jetbrains-studio"] floating enable
 
 # assign
 # assign [window_role="browser"] 1

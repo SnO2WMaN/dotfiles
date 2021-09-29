@@ -14,6 +14,8 @@ export QT_QPA_PLATFORM=wayland;
 
 export WINIT_UNIX_BACKEND=x11;
 
+export _JAVA_AWT_WM_NONREPARENTING=1;
+
 export GTK_IM_MODULE=DEFAULT=fcitx
 export QT_IM_MODULE=DEFAULT=fcitx
 export SDL_IM_MODULE=DEFAULT=fcitx

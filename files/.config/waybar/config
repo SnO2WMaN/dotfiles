@@ -10,7 +10,7 @@
   "margin-right": 4,
   // Choose the order of the modules
   "modules-left": ["custom/media", "sway/workspaces", "sway/mode"],
-  "modules-center": ["sway/window"],
+  "module-center": [],
   "modules-right": [
     "battery",
     "cpu",

@@ -6,7 +6,7 @@ alias v="vim"
 alias z="zellij"
 
 # 2 character
-alias dc="docker-compose"
+alias dc="docker compose"
 alias wq="wg-quick"
 
 # default

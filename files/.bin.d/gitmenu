@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+killall -q wofi
+
+case $(echo -e "Clone\nOpen" | wofi -i -b -p gitmenu --dmenu --width 100 --lines=2 | lowercase) in
+	clone)
+		ghclone-menu
+        ;;
+    open)
+		ghq-code-menu
+        ;;
+esac

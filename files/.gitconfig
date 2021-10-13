@@ -12,7 +12,9 @@
     c = commit --verbose
     b = branch
 	sw = switch
+	st = status
     pl = pull
     ps = push
     initc = commit --allow-empty -m 'Initial Commit'
-    root = rev-parse --show-toplevel
+    pwd = rev-parse --show-toplevel
+	branches = branch -a

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source=$(echo $1 | lowercase)
+
+[[ -z $source ]] && exit 1
+
+gh repo list -L 10000 $source --json url | jq -r '.[].url' > .github-repos.d/$source.txt

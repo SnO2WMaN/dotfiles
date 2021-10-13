@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for txtfile in `/bin/ls -1 ~/.github-repos.d`
+do
+	fetch-ghremotes $(basename $txtfile .txt)
+done

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+choice=$(killall -q wofi || ghq list | wofi -i -b --dmenu --lines=10 -p "open with code")
+
+[[ -n "$choice" ]] && code $(ghq root)/$choice

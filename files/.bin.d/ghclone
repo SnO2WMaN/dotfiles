@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+url=$(ls-ghremotes | fzf)
+[[ -n $url ]] && ghq get $url

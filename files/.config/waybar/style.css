@@ -33,6 +33,8 @@
 
 #window {
 	padding: 0 8px;
+	font-family: "Noto Sans", sans-serif;
+	font-size: 12px;
 }
 
 #mode {
@@ -42,7 +44,7 @@
 #custom-media {
 	padding: 0 16px;
 	font-family: "Noto Sans", sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 	background-color: @nord6;
 	color: @nord3;
 }
@@ -65,7 +67,7 @@
 	color: @nord4;
 }
 
-#workspaces button.visible{
+#workspaces button.visible {
 	background-color: @nord9;
 	color: @nord5;
 }

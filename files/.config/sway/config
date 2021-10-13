@@ -14,7 +14,7 @@ set $filer pcmanfm
 set $menu "~/.bin.d/dmenu"
 set $clipmenu "~/bin.d/clipmenu"
 set $powermenu "~/.bin.d/powermenu"
-set $ghqmenu "~/.bin.d/ghqmenu"
+set $gitmenu "~/.bin.d/ghq-code-menu"
 set $screenshot '~/.bin.d/screenshot'
 set $screenrecord '~/.bin.d/screenrecord'
 set $screenlock 'swaylock'
@@ -41,7 +41,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec --no-startup-id $menu
 bindsym $mod+p exec --no-startup-id $filer
 bindsym $mod+c exec --no-startup-id $clipmenu
-bindsym $mod+g exec --no-startup-id $ghqmenu
+bindsym $mod+g exec --no-startup-id $gitmenu
 bindsym $mod+F1 exec $code
 bindsym $mod+F2 exec $browser
 

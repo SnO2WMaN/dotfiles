@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+url=$(killall -q wofi || ls-ghremotes | wofi --dmenu)
+[[ -n $url ]] && ghq get $url

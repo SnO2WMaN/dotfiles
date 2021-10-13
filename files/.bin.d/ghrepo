@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-group=$(cat ~/.github-groups.txt | wofi --dmenu)
-ghq get $(gh repo list $group --json url | jq -r '.[].url' | wofi --dmenu)

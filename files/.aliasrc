@@ -1,6 +1,5 @@
 # 1 character
 alias d="docker"
-alias g="git"
 alias l="clear && ll"
 alias v="vim"
 
@@ -43,6 +42,11 @@ alias ll="ls -alF"
 alias la="ls -a"
 alias lt="ls -T"
 alias l1="ls -1"
+
+# git
+alias g="git"
+alias gpwd="git pwd"
+alias groot="gpwd"
 
 # clipboard
 alias copy="wl-copy"

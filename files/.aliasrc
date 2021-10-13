@@ -3,11 +3,11 @@ alias d="docker"
 alias g="git"
 alias l="clear && ll"
 alias v="vim"
-alias z="zellij"
 
 # 2 character
 alias dc="docker compose"
 alias wq="wg-quick"
+alias ze="zellij"
 
 # default
 alias terminal="$TERMINAL"

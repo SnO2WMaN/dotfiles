@@ -21,7 +21,7 @@ set $screenlock 'swaylock'
 
 # init
 exec mako
-exec fcitx5
+exec "fcitx5 -rd"
 exec gammastep
 exec swaybg -i ~/Pictures/wallpapers/nordic-mountain.jpg -m fill
 exec wl-paste -t text --watch clipman store
@@ -159,7 +159,7 @@ bar {
 }
 
 # floating mode
-for_window [app_id="Alacritty"] floating enable
+# for_window [app_id="Alacritty"] floating enable
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="pcmanfm"] floating enable

@@ -61,9 +61,14 @@ autoload -Uz colors && colors
 
 source <(direnv hook zsh)
 source <(starship init zsh --print-full-init)
+source <(poetry completions zsh)
 [[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh
 [[ -f "~/.cargo/env" ]] && source ~/.cargo/env
 [[ -f "~/.ghcup/env" ]] && source ~/.ghcup/env
+
+# dprint
+export DPRINT_INSTALL="$HOME/.dprint"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

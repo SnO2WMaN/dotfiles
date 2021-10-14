@@ -6,8 +6,8 @@ FILES_BASE_DIR="$(cd $(dirname $0); pwd)/../files/"
 #   mkdir -p $(dirname $target) && ln -snfv $file $target
 # done
 
-FILES_EXPECT_DOT_D=`find $(/bin/ls -1A . | /bin/grep -v .d$) -type f | /bin/xargs readlink -f | sort`
-FILES_DOT_D=`/bin/ls -1A $FILES_BASE_DIR | /bin/grep .d$ | /bin/xargs readlink -f | sort`
+FILES_EXPECT_DOT_D=`cd $FILES_BASE_DIR; find $(/bin/ls -1A $FILES_BASE_DIR | /bin/grep -v .d$) -type f | /bin/xargs readlink -f | sort`
+FILES_DOT_D=`cd $FILES_BASE_DIR; /bin/ls -1A $FILES_BASE_DIR | /bin/grep .d$ | /bin/xargs readlink -f | sort`
 
 for file in $FILES_EXPECT_DOT_D
 do

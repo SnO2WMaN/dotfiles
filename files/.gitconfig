@@ -18,3 +18,9 @@
     initc = commit --allow-empty -m 'Initial Commit'
     pwd = rev-parse --show-toplevel
 	branches = branch -a
+
+[core]
+	symlinks = true
+
+[pull]
+	rebase = false

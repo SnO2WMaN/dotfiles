@@ -4,10 +4,10 @@
 	// "position": "bottom", // Waybar position (top|bottom|left|right)
 	//    "height": 60, // Waybar height (to be removed for auto height)
 	// "width": 1280, // Waybar width
-	"margin-top": 4,
-	"margin-bottom": 4,
-	"margin-left": 4,
-	"margin-right": 4,
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"margin-left": 0,
+	"margin-right": 0,
 	// Choose the order of the modules
 	"modules-left": ["sway/workspaces", "sway/mode"],
 	"module-center": [],

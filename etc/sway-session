@@ -8,18 +8,19 @@ export XDG_CURRENT_SESSION=sway;
 # export LIBSEAT_BACKEND=logind;
 
 export QT_QPA_PLATFORM=wayland;
+export QT_QPA_PLATFORMTHEME=qt5ct;
 
 export MOZ_ENABLE_WAYLAND=1;
 export MOZ_DBUS_REMOTE=1;
 
-export WINIT_UNIX_BACKEND=x11;
+# export WINIT_UNIX_BACKEND=x11;
 
 export _JAVA_AWT_WM_NONREPARENTING=1;
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
-export XMODIFIERS=DEFAULT=\@im=fcitx
+export XMODIFIERS=\@im=fcitx
 
 sleep 1;
 exec sway

@@ -31,10 +31,11 @@ input * {
     xkb_layout "jp"
 }
 
-input * xkb_numlock enable
-
 # font
 font "Noto Sans Japanese" 8
+
+# cursor
+seat seat0 xcursor_theme Bibata-Original-Classic 24
 
 # launch app
 bindsym $mod+Return exec $term
@@ -135,12 +136,12 @@ bindsym $mod+Shift+space floating toggle
 floating_modifier $mod normal
 
 # gaps
-gaps inner 4
+gaps inner 2
 gaps outer 2
+default_border pixel 2
+
 smart_gaps on
 focus_follows_mouse no
-default_border pixel 2
-for_window [app_id="^.*"] border pixel 2
 
 # resize
 mode "resize" {
@@ -154,12 +155,20 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+m mode "media"
+
 bar {
     swaybar_command waybar
 }
 
 # floating mode
 # for_window [app_id="Alacritty"] floating enable
+
+for_window [title=".*"] {
+    title_format "゜%title"
+    border pixel 0
+}
+
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="pcmanfm"] floating enable

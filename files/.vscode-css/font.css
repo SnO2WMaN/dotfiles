@@ -1,0 +1,9 @@
+.sidebar .explorer-viewlet .label-name, /* sidebar */
+.editor .title .label-name, /* editor filename */
+.editor-group .name, /* open editors group name */
+h2, /* mode title */
+h3, /* tab title */
+.panel-switcher-container .action-label
+{
+    font-family: "PlemolJP" !important;
+}

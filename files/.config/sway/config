@@ -32,7 +32,7 @@ input * {
 }
 
 # font
-font "Noto Sans Japanese" 8
+font pango:PlemolJP35 8
 
 # cursor
 seat seat0 xcursor_theme Bibata-Original-Classic 24
@@ -138,7 +138,7 @@ floating_modifier $mod normal
 # gaps
 gaps inner 2
 gaps outer 2
-default_border pixel 2
+default_border pixel 4
 
 smart_gaps on
 focus_follows_mouse no
@@ -165,8 +165,7 @@ bar {
 # for_window [app_id="Alacritty"] floating enable
 
 for_window [title=".*"] {
-    title_format "゜%title"
-    border pixel 0
+    title_format "😥 %title"
 }
 
 for_window [app_id="pavucontrol"] floating enable

@@ -4,7 +4,7 @@ clock
 timestr=%H:%M:%S
 datestr=%Y.%m.%d
 
-font=Iosevka Nerd Font
+font=PlemolJP35
 font-size=16
 
 fade-in=0.1

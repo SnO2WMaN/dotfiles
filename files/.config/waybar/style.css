@@ -33,7 +33,7 @@
 
 #window {
 	padding: 0 8px;
-	font-family: "Noto Sans", sans-serif;
+	font-family: "PlemolJP", sans-serif;
 	font-size: 12px;
 }
 
@@ -43,7 +43,7 @@
 
 #custom-media {
 	padding: 0 16px;
-	font-family: "Noto Sans", sans-serif;
+	font-family: "PlemolJP", sans-serif;
 	font-size: 12px;
 	background-color: @nord6;
 	color: @nord3;
@@ -65,6 +65,9 @@
 	padding: 0 16px;
 	background-color: @nord2;
 	color: @nord4;
+
+	font-family: "PlemolJP", sans-serif;
+	font-size: 16px;
 }
 
 #workspaces button.visible {
@@ -93,7 +96,7 @@
 #mode,
 #idle_inhibitor {
 	padding: 0 16px;
-	font-family: "Iosevka Nerd Font", monospace;
+	font-family: "PlemolJP35", monospace;
 	font-size: 12px;
 }
 
@@ -162,6 +165,6 @@
 	padding: 0 16px;
 	background-color: @nord6;
 	color: @nord3;
-	font-family: "Iosevka Nerd Font", monospace;
+	font-family: "PlemolJP35", monospace;
 	font-size: 16px;
 }

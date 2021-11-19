@@ -67,6 +67,7 @@ source <(starship init zsh --print-full-init)
 [[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh
 [[ -f "~/.cargo/env" ]] && source ~/.cargo/env
 [[ -f "~/.ghcup/env" ]] && source ~/.ghcup/env
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # dprint
 export DPRINT_INSTALL="$HOME/.dprint"
@@ -113,3 +114,4 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 [[ "${terminfo[khome]}" != "" ]] && bindkey "${terminfo[khome]}" beginning-of-line
 [[ "${terminfo[kend]}" != "" ]] && bindkey "${terminfo[kend]}" end-of-line
+

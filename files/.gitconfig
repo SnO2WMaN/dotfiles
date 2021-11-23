@@ -5,8 +5,14 @@
 [init]
 	defaultBranch = main
 
-[credential "https://github.com"]
-    helper = !gh auth git-credential
+[core]
+	symlinks = true
+
+[pull]
+	rebase = false
+
+[fetch]
+    prune = true
 
 [alias]
     c = commit --verbose
@@ -19,8 +25,5 @@
     pwd = rev-parse --show-toplevel
 	branches = branch -a
 
-[core]
-	symlinks = true
-
-[pull]
-	rebase = false
+[credential "https://github.com"]
+    helper = !gh auth git-credential

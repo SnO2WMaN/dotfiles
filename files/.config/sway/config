@@ -25,6 +25,20 @@ exec "fcitx5 -rd"
 exec gammastep
 exec swaybg -i ~/Pictures/wallpapers/nordic-mountain.jpg -m fill
 exec wl-paste -t text --watch clipman store
+# gaps
+gaps inner 1
+gaps outer 1
+default_border pixel 2
+
+smart_gaps on
+focus_follows_mouse no
+
+# class                 border  bground text    indicator child_border
+client.focused          #5e81ac #5e81ac #eceff4 #5e81ac   #5e81ac
+client.focused_inactive #4c566a #4c566a #eceff4 #4c566a   #4c566a
+client.unfocused        #4c566a #4c566a #eceff4 #4c566a   #4c566a
+client.urgent           #bf616a #bf616a #F8F8F2 #bf616a   #bf616a
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 # input
 input * {
@@ -135,13 +149,6 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
 floating_modifier $mod normal
 
-# gaps
-gaps inner 2
-gaps outer 2
-default_border pixel 4
-
-smart_gaps on
-focus_follows_mouse no
 
 # resize
 mode "resize" {

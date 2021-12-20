@@ -73,6 +73,9 @@ source <(starship init zsh --print-full-init)
 export DPRINT_INSTALL="$HOME/.dprint"
 export PATH="$DPRINT_INSTALL/bin:$PATH"
 
+# VSCode
+export PATH="$HOME/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin:$PATH"
+
 # cargo
 export CARGO_BIN="$HOME/.cargo/bin"
 export PATH="$CARGO_BIN:$PATH"

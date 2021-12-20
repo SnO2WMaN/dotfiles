@@ -110,7 +110,7 @@
 }
 
 #temperature.critical {
-	color: @warning;
+	background-color: @warning;
 }
 
 @keyframes battery-blink {
@@ -120,14 +120,9 @@
 	}
 }
 
-#battery.critical:not(.charging) {
-	background-color: #ff5555;
-	color: #f8f8f2;
-	animation-name: battery-blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+#battery.critical {
+	background-color: @nord11;
+	color: @nord1;
 }
 
 #network {
@@ -136,7 +131,7 @@
 }
 
 #network.disconnected {
-	background-color: @bg-critcal;
+	background-color: @nord11;
 }
 
 #pulseaudio {

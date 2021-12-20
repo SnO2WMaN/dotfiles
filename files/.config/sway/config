@@ -32,6 +32,7 @@ default_border pixel 2
 
 smart_gaps on
 focus_follows_mouse no
+titlebar_padding 10 8
 
 # class                 border  bground text    indicator child_border
 client.focused          #5e81ac #5e81ac #eceff4 #5e81ac   #5e81ac
@@ -49,7 +50,7 @@ input * {
 font pango:PlemolJP35 8
 
 # cursor
-seat seat0 xcursor_theme Bibata-Original-Classic 24
+seat seat0 xcursor_theme "Breeze Snow" 24
 
 # launch app
 bindsym $mod+Return exec $term
@@ -170,10 +171,6 @@ bar {
 
 # floating mode
 # for_window [app_id="Alacritty"] floating enable
-
-for_window [title=".*"] {
-    title_format "😥 %title"
-}
 
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable

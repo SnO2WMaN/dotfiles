@@ -13,3 +13,8 @@ Comment=An i3-compatible Wayland compositor
 Exec=/usr/local/bin/sway-session
 Type=Application
 ```
+
+
+## License
+
+- https://github.com/tonyfettes/fcitx5-nord ([LICENSE](https://github.com/tonyfettes/fcitx5-nord/blob/master/LICENSE))

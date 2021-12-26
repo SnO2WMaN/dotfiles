@@ -1,3 +1,5 @@
 golang 1.17
 python 3.9.1
 nodejs 16.13.0
+dart 2.15.1
+deno 1.17.1

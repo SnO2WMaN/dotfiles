@@ -78,6 +78,7 @@ ntfs-3g
 opam
 openresolv
 openssh
+pandoc
 patch
 pavucontrol
 pcmanfm-gtk3
@@ -122,6 +123,7 @@ wine
 wireguard-tools
 wl-clipboard
 wofi
+wxgtk2
 xf86-video-amdgpu
 xorg-server
 xorg-server-xephyr

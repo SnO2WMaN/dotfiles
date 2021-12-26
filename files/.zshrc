@@ -69,6 +69,9 @@ autoload -Uz colors && colors
 # asdf
 [[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh
 
+# VSCode
+export PATH="$HOME/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin:$PATH"
+
 # cargo
 [[ -f "$HOME/.cargo/env" ]] && source $HOME/.cargo/env
 

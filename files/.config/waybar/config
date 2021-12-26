@@ -17,8 +17,8 @@
 		"temperature",
 		"memory",
 		"disk",
-		"backlight",
 		"network",
+		"backlight",
 		"pulseaudio",
 		"sway/language",
 		"tray",
@@ -138,11 +138,11 @@
 	//        "format-icons": ["", ""]
 	//    },
 	"battery": {
-		"interval": 30,
+		"interval": 5,
 		"states": [
 			{ "name": "good", "value": 95 },
 			{ "name": "warning", "value": 30 },
-			{ "name": "critical", "value": 15 }
+			{ "name": "critical", "value": 20 }
 		],
 		"format": "{icon}  {capacity}%",
 		"format-charging": "  {capacity}%",

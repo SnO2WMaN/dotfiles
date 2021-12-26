@@ -30,11 +30,12 @@ export BROWSER="firefox-developer-edition"
 export EDITOR="vim"
 export FILER="ranger"
 
-# bin.d
-export PATH=~/.bin.d:$PATH
+export PATH="$HOME/.bin.d:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
+export PATH="$HOME/.dprint/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
-# aliases
-[[ -f ~/.aliasrc ]] && source ~/.aliasrc
+fpath=($HOME/.zsh $fpath)
 
 # scripts loading
 export SCRIPTS_DIR="${HOME}/.scripts.d"
@@ -62,24 +63,33 @@ autoload -U add-zsh-hook
 autoload -Uz compinit && compinit -i
 autoload -Uz colors && colors
 
-source <(direnv hook zsh)
-source <(starship init zsh --print-full-init)
-[[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh
-[[ -f "~/.cargo/env" ]] && source ~/.cargo/env
-[[ -f "~/.ghcup/env" ]] && source ~/.ghcup/env
-[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# aliases
+[[ -f $HOME/.aliasrc ]] && source $HOME/.aliasrc
 
-# dprint
-export DPRINT_INSTALL="$HOME/.dprint"
-export PATH="$DPRINT_INSTALL/bin:$PATH"
+# asdf
+[[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh
 
 # cargo
-export CARGO_BIN="$HOME/.cargo/bin"
-export PATH="$CARGO_BIN:$PATH"
+[[ -f "$HOME/.cargo/env" ]] && source $HOME/.cargo/env
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# ghcup
+[[ -f "$HOME/.ghcup/env" ]] && source $HOME/.ghcup/env
+
+# opam
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# direnv
+source <(direnv hook zsh)
+
+# starship
+source <(starship init zsh --print-full-init)
+
+# velociraptor
+source <(vr completions zsh)
 
 # keybinding
 bindkey -e

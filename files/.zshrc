@@ -48,15 +48,14 @@ zle -N projects
 
 # zinit
 source ~/.zinit/bin/zinit.zsh
-zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node \
-    zsh-users/zsh-completions \
-    zsh-users/zsh-autosuggestions \
-    zsh-users/zsh-syntax-highlighting \
-    zsh-users/zsh-history-substring-search
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zdharma-continuum/zinit-annex-as-monitor
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
+zinit light zdharma-continuum/zinit-annex-patch-dl
+zinit light zdharma-continuum/zinit-annex-rust
 
 # autoload
 autoload -U add-zsh-hook
@@ -128,3 +127,5 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 [[ "${terminfo[khome]}" != "" ]] && bindkey "${terminfo[khome]}" beginning-of-line
 [[ "${terminfo[kend]}" != "" ]] && bindkey "${terminfo[kend]}" end-of-line
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

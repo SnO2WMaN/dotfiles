@@ -84,14 +84,9 @@ export PATH="$HOME/.config/Code/User/globalStorage/ms-vscode-remote.remote-conta
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# direnv
-source <(direnv hook zsh)
-
-# starship
-source <(starship init zsh --print-full-init)
-
-# velociraptor
-source <(vr completions zsh)
+which direnv >/dev/null 2>&1 && source <(direnv hook zsh)
+which starship >/dev/null 2>&1 && source <(starship init zsh --print-full-init)
+which vr >/dev/null 2>&1 && source <(vr completions zsh)
 
 # keybinding
 bindkey -e

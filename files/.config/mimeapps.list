@@ -1,0 +1,16 @@
+[Default Applications]
+x-scheme-handler/discord-482370205331226644=discord-482370205331226644.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
+text/x-log=visual-studio-code.desktop
+image/png=org.xfce.ristretto.desktop
+application/json=visual-studio-code.desktop
+image/gif=org.xfce.ristretto.desktop
+text/plain=visual-studio-code.desktop
+
+[Added Associations]
+text/x-log=visual-studio-code.desktop;
+image/png=org.xfce.ristretto.desktop;
+text/html=visual-studio-code.desktop;
+application/json=visual-studio-code.desktop;
+image/gif=org.xfce.ristretto.desktop;
+text/plain=visual-studio-code.desktop;

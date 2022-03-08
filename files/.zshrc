@@ -27,13 +27,14 @@ WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider
 # default applications
 export TERMINAL="alacritty"
 export BROWSER="firefox-developer-edition"
-export EDITOR="vim"
+export EDITOR="nvim"
 export FILER="ranger"
 
 export PATH="$HOME/.bin.d:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/.dprint/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 fpath=($HOME/.zsh $fpath)
 
@@ -83,6 +84,10 @@ export PATH="$HOME/.config/Code/User/globalStorage/ms-vscode-remote.remote-conta
 # sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# bvm
+export BVM_INSTALL_DIR="$HOME/.bvm"
+[[ -f "$BVM_INSTALL_DIR/bin/bvm-init" ]] && source "$BVM_INSTALL_DIR/bin/bvm-init"
 
 which direnv >/dev/null 2>&1 && source <(direnv hook zsh)
 which starship >/dev/null 2>&1 && source <(starship init zsh --print-full-init)

@@ -8,7 +8,7 @@ set $right Right
 
 set $term alacritty
 set $code code
-set $browser firefox-developer-edition
+set $browser firefox
 set $filer pcmanfm
 
 set $menu "~/.bin.d/dmenu"
@@ -58,7 +58,7 @@ input * {
 font pango:PlemolJP35 8
 
 # cursor
-seat seat0 xcursor_theme "Breeze Snow" 24
+# seat seat0 xcursor_theme "Breeze Snow" 24
 
 # launch app
 bindsym $mod+Return exec $term

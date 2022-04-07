@@ -35,6 +35,7 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/.dprint/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.nimble/bin:$PATH"
 
 fpath=($HOME/.zsh $fpath)
 

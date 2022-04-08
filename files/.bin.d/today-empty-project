@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+PROJECTS_DIR=~/Documents/temp-projects
+PROJECT_NAME=$(date "+%Y%m%d_%H%M%S")
+
+PROJECT_LOCATION="$PROJECTS_DIR/$PROJECT_NAME"
+
+mkdir -p "$PROJECT_LOCATION" ;\
+    cd "$PROJECT_LOCATION" || exit ;\
+    git init ;\
+    git commit --allow-empty -m "Initial Commit" ;\
+    code "$PROJECT_LOCATION"

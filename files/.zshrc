@@ -36,6 +36,7 @@ export PATH="$HOME/.dprint/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.nimble/bin:$PATH"
+export PATH="$HOME/.elan/bin:$PATH"
 
 fpath=($HOME/.zsh $fpath)
 

@@ -189,6 +189,7 @@ for_window [app_id="ristretto"] floating enable
 for_window [app_id="zoom"] floating enable
 for_window [app_id="org.larusstone.qtspim"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
+for_window [instance="fontforge"] floating enable
 for_window [instance="1password"] floating enable
 for_window [instance="qpaeq"] floating enable
 # for_window [instance="jetbrains-studio"] floating enable
